@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://andersonsiu.github.io/mi-portafolio/sitemap-index.xml
