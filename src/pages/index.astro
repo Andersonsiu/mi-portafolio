@@ -1,0 +1,61 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
+---
+
+<Layout
+  title="Portafolio de Ruben Anderson Rojas Ramos - Ingeniero Informático"
+  description="Portafolio de Ruben Anderson, apasionado por la tecnología y los datos. Con experiencia en el desarrollo de proyectos innovadores y gestión de datos."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experiencia Laboral
+      </TitleSection>
+      <Experience
+        company="20bet"
+        role="Social Media Manager"
+        date="Agosto 2022 - Actualidad"
+        description="Gestión de redes sociales, creación de contenido, análisis de métricas y coordinación de campañas publicitarias."
+      />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Proyectos
+      </TitleSection>
+      <Projects>
+        <li>Prototipo de Monitoreo de Aguas Residuales - Tecnologías: Python, AWS, MySQL, Docker & Kubernetes. <a href="https://sites.google.com/upch.pe/humedaltech/inicio" target="_blank">Ver más</a></li>
+        <li>Sistema de Gestión de Divisas para Casa de Cambio - Tecnologías: MySQL, Flask, Docker. <a href="https://github.com/Andersonsiu/Sistema-Casa-Cambio" target="_blank">Repositorio</a></li>
+      </Projects>
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe>
+        <p>Soy Ruben Anderson Rojas Ramos, estudiante de Ingeniería Informática en la Universidad Cayetano Heredia. Me especializo en análisis y gestión de datos, con experiencia en el desarrollo de soluciones tecnológicas. Me apasiona participar en proyectos innovadores que impulsen el éxito empresarial.</p>
+      </AboutMe>
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>

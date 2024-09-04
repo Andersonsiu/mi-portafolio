@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Agosto 2024 - Actualidad",
+    title: "Practicante Analista de Datos",
+    company: "Agencia de Embudos de Ventas CV",
+    description:
+      "Practicante en análisis de datos, responsable de la gestión y visualización de datos usando MySQL y SQL. Creación de informes y análisis de embudos de ventas para mejorar la toma de decisiones.",
+    link: "https://www.linkedin.com/company/consigueventas/",  // Puedes agregar un enlace si es relevante
+  },
+  {
+    date: "Agosto 2022 - Actualidad",
+    title: "Social Media Manager",
+    company: "20bet",
+    description:
+      "Gestión de redes sociales, creación de contenido y análisis de métricas de rendimiento. Coordinación de campañas publicitarias y promociones para aumentar la visibilidad y el engagement.",
+    link: "https://www.instagram.com/20bet.peru/",  // Si tienes un link relacionado con esta experiencia, agrégalo aquí.
+  },
+]
+
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

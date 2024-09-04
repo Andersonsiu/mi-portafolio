@@ -1,0 +1,86 @@
+---
+const personalImageAlt = "Ruben Anderson"
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      Me llamo Ruben Anderson pero mis amigos me llaman Ander. Soy estudiante de
+      <strong>Ingeniería Informática</strong> y estoy en constante aprendizaje en el
+      mundo del <strong>desarrollo de software y análisis de datos</strong>.
+    </p>
+
+    <p>
+      He trabajado en proyectos innovadores como el <strong>prototipo de monitoreo de aguas residuales</strong>, utilizando herramientas como Python, AWS y Docker. Mi objetivo es seguir creciendo profesionalmente y colaborar en proyectos que generen un impacto positivo.
+    </p>
+
+    <p>
+      Estoy siempre en busca de <strong>nuevas oportunidades</strong> para aplicar mis habilidades y aprender tecnologías emergentes. Mi meta es contribuir a la industria tecnológica y ayudar a las empresas a alcanzar sus objetivos.
+    </p>
+  </div>
+
+  <img width="200" height="200" src="/me.png" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
+</article>
+
+<!-- Secciones con íconos SVG -->
+
+<section class="mt-16 text-gray-700 dark:text-gray-300">
+  <!-- Formación Complementaria -->
+  <div class="mb-12">
+    <div class="flex items-center mb-4">
+      <!-- Ícono de educación SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-500 dark:text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.818 3.073L12 18l-6.978-4.349c.065-1.042.325-2.05.818-3.073L12 14z" />
+      </svg>
+      <h2 class="ml-3 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-white">Formación Complementaria</h2>
+    </div>
+    <ul class="pl-8 mt-4 space-y-3 list-disc text-lg">
+      <li><strong>AWS Academy Cloud Foundations (AWS)</strong>, Amazon | Marzo 2023 - Julio 2023</li>
+      <li><strong>Temas avanzados de MYSQL</strong>, Meta | Septiembre 2023 - Octubre 2023</li>
+      <li><strong>Scrum Foundation Professional</strong>, CertiProf | Septiembre 2023 - Octubre 2023</li>
+      <li><strong>Preparing Data for Analysis with Microsoft Excel</strong>, Microsoft | Diciembre 2023 - Enero 2024</li>
+      <li><strong>AWS Academy Data Engineering (AWS)</strong>, Amazon | Marzo 2024 - Junio 2024</li>
+    </ul>
+  </div>
+
+  <!-- Idiomas -->
+  <div class="mb-12">
+    <div class="flex items-center mb-4">
+      <!-- Ícono de idiomas SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-500 dark:text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m0 14v2m-6 0h12M9 9l-6 6m0 0l6 6m-6-6h12" />
+      </svg>
+      <h2 class="ml-3 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-white">Idiomas</h2>
+    </div>
+    <ul class="pl-8 mt-4 space-y-3 list-disc text-lg">
+      <li><strong>Español:</strong> Nativo</li>
+      <li><strong>Inglés:</strong> Intermedio</li>
+    </ul>
+  </div>
+
+  <!-- Informática -->
+  <div class="mb-12">
+    <div class="flex items-center mb-4">
+      <!-- Ícono de informática SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-500 dark:text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3m0 0h3m-3 0v3m0-3v-3m0 0l-3 3m0 0l3-3m-3 3l-3 3m3-3l3-3" />
+      </svg>
+      <h2 class="ml-3 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-white">Informática</h2>
+    </div>
+    <ul class="pl-8 mt-4 space-y-3 list-disc text-lg">
+      <li>- Python</li>
+      <li>- AWS</li>
+      <li>- Excel</li>
+      <li>- MySQL</li>
+      <li>- MongoDB</li>
+      <li>- Oracle</li>
+      <li>- Power BI</li>
+      <li>- HTML & CSS</li>
+      <li>- Docker & Kubernetes</li>
+      <li>- Flask</li>
+    </ul>
+  </div>
+</section>

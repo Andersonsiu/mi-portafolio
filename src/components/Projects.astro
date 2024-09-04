@@ -1,0 +1,102 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import Link from "./icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+
+const TAGS = {
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#3572A5] text-white",
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758F] text-white",
+  },
+  FLASK: {
+    name: "Flask",
+    class: "bg-[#000000] text-white",
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#47A248] text-white",
+  },
+  ARDUINO: {
+    name: "Arduino",
+    class: "bg-[#00979D] text-white",
+  },
+  SENSORS: {
+    name: "Programación de Sensores",
+    class: "bg-[#FF9900] text-white",
+  },
+}
+
+const PROJECTS = [
+  {
+    title: "Sistema de Gestión de Divisas para Casa de Cambio",
+    description:
+      "🚀 Sistema de Gestión para Casas de Cambio 💱 diseñado para registrar y visualizar transacciones de cambio de divisas en múltiples monedas. El sistema cuenta con una interfaz intuitiva, visualización de estadísticas clave y control de caja diario. Además, genera informes detallados y realiza análisis de ganancias y pérdidas. Implementado con Flask, MongoDB y Docker Compose para un rendimiento escalable y eficiente.",
+    link: "https://github.com/Andersonsiu/Sistema-Casa-de-Cambio",
+    github: "https://github.com/Andersonsiu/Sistema-Casa-de-Cambio",
+    image: "/projects/casa-cambio.jpeg",  // Cambia la ruta de la imagen si es necesario
+    tags: [TAGS.PYTHON, TAGS.FLASK, TAGS.MONGODB],
+  },
+  {
+    title: "Prototipo de Monitoreo de Aguas Residuales",
+    description:
+      "Prototipo desarrollado para el monitoreo en tiempo real de aguas residuales en un humedal artificial, utilizando programación de sensores y Arduino. Este sistema mide la concentración de pH y conductividad, y envía los datos a una base de datos para su análisis y predicción. El proyecto está centrado en mejorar la sostenibilidad y el análisis de datos ambientales.",
+    link: "https://sites.google.com/upch.pe/humedaltech/inicio",
+    github: "",  // Puedes agregar tu enlace de GitHub si tienes el código ahí
+    image: "/projects/aguas-residuales.png",  // Cambia la ruta de la imagen si es necesario
+    tags: [TAGS.PYTHON, TAGS.ARDUINO, TAGS.SENSORS],
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+      <div class="w-full md:w-1/2">
+        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 md:max-w-lg">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          {title}
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                >
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+          <footer class="flex items-end justify-start mt-4 gap-x-4">
+            {github && (
+              <LinkButton href={github}>
+                <GitHub class="size-6" />
+                Code
+              </LinkButton>
+            )}
+            {link && (
+              <LinkButton href={link}>
+                <Link class="size-4" />
+                Preview
+              </LinkButton>
+            )}
+          </footer>
+        </div>
+      </div>
+    </article>
+    ))
+  }
+</div>
